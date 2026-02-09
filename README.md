@@ -1,4 +1,4 @@
-# Synthetic data creation
+# Synthetic data generation project
 This project aims to generate synthetic marketing data so to recreate a functional marketing dashboard. This task is part of a recruitment process; the detailed initial instructions can be found [here](https://github.com/ej29-r3d/Marketing-Analytics-Assignments/tree/main/tcs-assignment).
 
 ---
