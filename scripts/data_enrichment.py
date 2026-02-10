@@ -38,9 +38,13 @@ df_master['Conversion_Rate'] = np.where(df_master['clicks'] > 0,
                                         (df_master['conversions'] / df_master['clicks']) * 100, 
                                         0)
 
+# Select only newly calculated metrics for export
+df_metrics = df_master[['CPM', 'CTR', 'CPC', 'Conversion_Rate']]
+
 # Check for nulls or anomalies
-print(df_master.info())
+print(df_metrics.info())
 
 # Export to CSV
-df_master.to_csv('../docs/marketing_analytics_master.csv', index=False)
-print("Export complete: ../docs/marketing_analytics_master.csv")
+df_metrics.to_csv('../docs/dim_kpis.csv', index=False)
+print("Export complete: ../docs/dim_kpis.csv")
+print(f"Exported {len(df_metrics)} rows with {len(df_metrics.columns)} metric columns")
